@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="34d5a8eb-6603-48d3-b8cf-4c6301015aed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/registerForm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/Application.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mvc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1dB5GJp2GPkpL535LA2qrnXN4z1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/templates/assets/css" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\mvc\app\templates" />
+      <recent name="C:\OSPanel\domains\mvc\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\mvc\app\templates\assets\css" />
+      <recent name="C:\OSPanel\domains\mvc" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34d5a8eb-6603-48d3-b8cf-4c6301015aed" name="Default Changelist" comment="" />
+      <created>1591885548803</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591885548803</updated>
+      <workItem from="1591885551482" duration="1989000" />
+      <workItem from="1591975848523" duration="3831000" />
+      <workItem from="1592033095954" duration="5645000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2127" y="442" key="com.intellij.ide.util.TipDialog" timestamp="1591885553429">
+    <state x="2024" y="277" key="#Composer" timestamp="1591975873538">
       <screen x="1920" y="0" width="1024" height="1240" />
     </state>
-    <state x="2127" y="442" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1591885553429" />
+    <state x="2024" y="277" key="#Composer/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1591975873538" />
+    <state x="737" y="431" key="ComposerInitDialogKey" timestamp="1592037022621">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="737" y="431" key="ComposerInitDialogKey/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592037022621" />
+    <state x="739" y="260" key="FileChooserDialogImpl" timestamp="1591980689602">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="260" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1591980689602" />
+    <state x="388" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1592033098668">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="388" y="371" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592033098668" />
+    <state x="2127" y="442" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1591975849214" />
   </component>
 </project>
