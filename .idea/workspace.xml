@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34d5a8eb-6603-48d3-b8cf-4c6301015aed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Request.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/Validator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/View.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/User/authorization.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/User/registerForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/userModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/registerForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/registerForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/assets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/UserModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/assets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/registerForm.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/View.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,15 +44,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/templates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\OSPanel\domains\mvc\app\views\assets" />
+      <recent name="C:\OSPanel\domains\mvc\app\templates\User" />
       <recent name="C:\OSPanel\domains\mvc\app\templates" />
+      <recent name="C:\OSPanel\domains\mvc\app\templates\assets" />
+      <recent name="C:\OSPanel\domains\mvc\app" />
       <recent name="C:\OSPanel\domains\mvc\public" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\mvc\app\templates" />
       <recent name="C:\OSPanel\domains\mvc\core" />
       <recent name="C:\OSPanel\domains\mvc\app\templates\assets\css" />
       <recent name="C:\OSPanel\domains\mvc" />
@@ -75,7 +73,12 @@
       <updated>1591885548803</updated>
       <workItem from="1591885551482" duration="1989000" />
       <workItem from="1591975848523" duration="3831000" />
-      <workItem from="1592033095954" duration="15406000" />
+      <workItem from="1592033095954" duration="15931000" />
+      <workItem from="1592078436950" duration="2044000" />
+      <workItem from="1592104840689" duration="7708000" />
+      <workItem from="1592119618338" duration="1974000" />
+      <workItem from="1592124844494" duration="10097000" />
+      <workItem from="1592151317275" duration="6732000" />
     </task>
     <servers />
   </component>
@@ -87,22 +90,38 @@
       <screen x="1920" y="0" width="1024" height="1240" />
     </state>
     <state x="2024" y="277" key="#Composer/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1591975873538" />
+    <state x="552" y="177" key="#Inspections" timestamp="1592140642915">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="177" key="#Inspections/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592140642915" />
     <state x="737" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592040790008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="737" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592040790008" />
+    <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592121174070">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592121174070" />
     <state x="737" y="431" key="ComposerInitDialogKey" timestamp="1592037022621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="737" y="431" key="ComposerInitDialogKey/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592037022621" />
-    <state x="739" y="260" key="FileChooserDialogImpl" timestamp="1591980689602">
+    <state x="739" y="260" key="FileChooserDialogImpl" timestamp="1592140499244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="260" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1591980689602" />
+    <state x="739" y="260" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592140499244" />
     <state x="388" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1592033098668">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="388" y="371" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592033098668" />
     <state x="2127" y="442" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1591975849214" />
+    <state x="616" y="235" key="run.anything.popup" timestamp="1592121531129">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="235" key="run.anything.popup/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592121531129" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1592078820562">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592078820562" />
   </component>
 </project>

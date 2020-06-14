@@ -1,24 +1,27 @@
 <?php
 namespace core;
+include "../app/controllers/user.php";
 
+
+
+require_once "../vendor/autoload.php";
 class Application
 {
+
+
+
     public function run()
     {
         $router = new Router();
-        $router->verificationOfAuthorization();
+        $router->getRoute();
+        $controllerFileName = $router->getControllerName();
+        $controllerObj = new $controllerFileName();
 
-
-
-//        include "../app/views/registerForm.html";
+        $actionFuncName =  $router->getActionName();
+//        include "../app/templates/registerForm.html";
+        $controllerObj->$actionFuncName();
     }
-
-
 }
-
-
-
-
 
 
 
