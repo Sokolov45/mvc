@@ -26,13 +26,13 @@ class User
             {
                 // Проверяем существует ли пользователь
                 $checkEmail = User::checkUserEmail($email);
-                $checkLogin = User::checkUserLogin($login);
-                if ($checkLogin == true) $errors[] = 'Пользователь с таким Логином, уже зарегистрирован, введите другой Логин';
+
+
                 if ($checkEmail == true) $errors[] = 'Пользователь с таким E-mail, уже зарегистрирован, введите другой E-mail';
                 else
-                {0
+                {
                     $hashed_password = User::generateHash($password); // Сохраняем Хеш пароля
-                    if (!User::register($login, $email, $hashed_password)) $errors[] = 'Ошибка Базы Данных';
+                    if (!User::register($email, $hashed_password)) $errors[] = 'Ошибка Базы Данных';
                 }
             }
         }
