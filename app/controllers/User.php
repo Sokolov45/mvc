@@ -30,7 +30,7 @@ class User
                 if ($checkLogin == true) $errors[] = 'Пользователь с таким Логином, уже зарегистрирован, введите другой Логин';
                 if ($checkEmail == true) $errors[] = 'Пользователь с таким E-mail, уже зарегистрирован, введите другой E-mail';
                 else
-                {
+                {0
                     $hashed_password = User::generateHash($password); // Сохраняем Хеш пароля
                     if (!User::register($login, $email, $hashed_password)) $errors[] = 'Ошибка Базы Данных';
                 }
@@ -43,7 +43,8 @@ class User
 
     public function authorizationAction()
     {
-        echo '32e432';
+        echo 'здесь выведем форму авторизации';
+//        include "../templates/User/authorization.phtml";
     }
 
 }

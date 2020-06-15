@@ -14,10 +14,10 @@ class UserModel
     public function register($name, $email, $password)
     {
         $db = Db::getConnection();
-        $sql = 'INSERT INTO users (login, email, password) VALUES (:login, :email, :password)';
+        $sql = 'INSERT INTO mvc (`name`, email, password) VALUES (:name, :email, :password)';
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
-        $result->bindParam(':login', $login, PDO::PARAM_STR);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
         return $result->execute();
@@ -59,31 +59,5 @@ class UserModel
         if ($user) return true;
         else return false;
     }
-
-    public static function checkUserLogin($login)
-    {
-        $db = Db::getConnection();
-        $sql = 'SELECT * FROM users WHERE login = :login';
-        $result = $db->prepare($sql);
-        $result->bindParam(':login', $login, PDO::PARAM_STR);
-        $result->execute();
-        $user = $result->fetch();
-        if ($user) return true;
-        else return false;
-    }
-
-
-//    что должна делать:
-//1 - сохранение модели в БД
-// 2-  получение модели из базы и заполнение ее данными.
-//2 - регистрация. При регистрации проверяется:
-//длина пароля (не менее 4х символов)
-//требуется ввод пароля дважды
-//введенные пароли должны совпадать
-//3 - авторизацию пользователя. Пользователь авторизуется по email и паролю. Пароль хранится в зашифрованном
-//виде в БД
-//
-
-
 
 }
