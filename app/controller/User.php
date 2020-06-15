@@ -1,10 +1,8 @@
 <?php
-namespace controllers;
-//use models\UserModel;
-//require_once "../../vendor/autoload.php";
-
+namespace app\controller;
 class User
 {
+//    сюда запихиваем объект вью
     public $view;
 
     public function registerFormAction()
@@ -43,8 +41,7 @@ class User
 
     public function authorizationAction()
     {
-        echo 'здесь выведем форму авторизации';
-//        include "../templates/User/authorization.phtml";
+        $this->view->var = 'это я запихивал в вью контроллера';
     }
 
 }

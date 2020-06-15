@@ -1,16 +1,28 @@
 <?php
 namespace core;
-use controllers\User;
+//use controller\User;
+//include "../app/controller/User.php";
 require_once "../vendor/autoload.php";
-
 
 class Application
 {
-
     public function run()
     {
         $router = new Router();
-        $router->goRoute();
+
+//        $a = new User();
+//        $a->authorizationAction();
+//        var_dump($a);
+        $router->getRoute();
+        $controllerFileName = $router->getControllerName();
+        $actionFuncName =  $router->getActionName();
+//        include "../app/controller/$controllerFileName.php";
+//        $controllerObj = new $controllerFileName();
+//        var_dump($controllerObj);
+        $controllerObj = new User();
+//
+//        var_dump($actionFuncName);
+
     }
 }
 
