@@ -10,6 +10,9 @@ class UserModel
     private $email;
     private $password;
 
+    //проверка авторизации
+
+
     //сохранение модели в базу данных
     public function register($name, $email, $password)
     {
@@ -23,7 +26,6 @@ class UserModel
         return $result->execute();
     }
 
-
     function generateHash($password) {
         if (defined("CRYPT_BLOWFISH") && CRYPT_BLOWFISH) {
             $salt = '$2y$11$' . substr(md5(uniqid(rand(), true)), 0, 22);
@@ -36,6 +38,7 @@ class UserModel
         if (strlen($name) >= 2) return true;
         else return false;
     }
+
     public static function checkPassword($password)
     {
         if (strlen($password) >= 4) return true;

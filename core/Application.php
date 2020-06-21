@@ -1,36 +1,75 @@
 <?php
 namespace core;
-//use controller\User;
-//include "../app/controller/User.php";
 require_once "../vendor/autoload.php";
-
 class Application
 {
     public function run()
     {
-        $router = new Router();
+        session_start();
+        if (!isset($_SESSION["user_ID"])) {
+            header("Location: user/authorization");
+            exit();
+        }
 
-//        $a = new User();
-//        $a->authorizationAction();
-//        var_dump($a);
-        $router->getRoute();
-        $controllerFileName = $router->getControllerName();
-        $actionFuncName =  $router->getActionName();
-//        include "../app/controller/$controllerFileName.php";
-//        $controllerObj = new $controllerFileName();
-//        var_dump($controllerObj);
-        $controllerObj = new User();
+
+        //Инициализируем сессию:
+
+//        if(!isset($_SESSION['userid']))
+//        if(1)    {
+////            echo 'sadf';
+//            header("user/authorization");
 //
-//        var_dump($actionFuncName);
+////            die;
+//
+//        }
+
+//        if (isset($_POST['login']) && isset($_POST['password']))
+//        {
+//// получаем данные из формы с авторизацией
+//            $login = mysql_real_escape_string($_POST['login']);
+//            $password = $_POST['password'];
+////проверка пароля и логина
+//            if (($login=='a123')&& ($password=='123')){
+//                echo ("логин совпадает и пароль верны");
+//                $_SESSION['Name']=$login;
+//// идем на страницу для авторизованного пользователя
+//                header("Location: /author/sekret.php");
+//            }
+//            else
+//            {die('Такой логин с паролем не найдены в базе данных.');
+//            }
+//        }
+//
+
+//        if (!method_exists($controllerObj, $actionFuncName)) {
+//            echo "такого экшена нет";
+//            die;}
+//
+//        $request = new Request();
+//        $controllerName = $request->getControllerName();
+//        $actionName = $request->getActionName();
+//
+//        $actionFuncName = $actionName . 'Action';
+//        $controllerFileName = ucfirst($controllerName);
+//        $controllerObj = 'app\controller\\' . $controllerFileName;
+//        $controllerObj = new $controllerObj();
+//
+//        $tpl = "../app/templates/" . $controllerFileName . '/' . $actionName . '.phtml';
+//        var_dump($tpl);
+//        $view = new View();
+//        $controllerObj->view = $view;
+//        $controllerObj->$actionFuncName();
+//        $view->render($tpl);
+//        echo $view->render($tpl);
+
 
     }
 }
 
 
 
-//if(isset($_SESSION["error_messages"]) && !empty($_SESSION["error_messages"])){
-//    echo $_SESSION["error_messages"];
-//
-//    //Уничтожаем чтобы не выводились заново при обновлении страницы
-//    unset($_SESSION["error_messages"]);
-//}
+
+
+
+
+

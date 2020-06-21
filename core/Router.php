@@ -2,13 +2,8 @@
 namespace core;
 //include "../app/controller/User.php";
 //use controller\User;
-
-
-//
 //require_once "../vendor/autoload.php";
-
-
-use controllers\User;
+//use controllers\User;
 
 class Router
 {
