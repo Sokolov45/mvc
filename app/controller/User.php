@@ -5,8 +5,9 @@ class User
 //    сюда запихиваем объект вью
     public $view;
 
-    public function registerFormAction()
+    public function registerAction()
     {
+//        include "../app/templates/User/register.phtml";
 //        $name = false;
 //        $email = false;
 //        $password = false;

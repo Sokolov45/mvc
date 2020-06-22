@@ -6,24 +6,29 @@ class Application
     public function run()
     {
         session_start();
-        if (!isset($_SESSION["user_ID"])) {
-            header("Location: user/authorization");
+        if (!isset($_SESSION["user_ID"]) &&  $_SERVER['REQUEST_URI'] != '/user/register') {
+//            header("Location: user/authorization");
+            include "../app/templates/User/authorization.phtml";
             exit();
+        } else {
+            $request = new Request();
+            $controllerName = $request->getControllerName();
+            $actionName = $request->getActionName();
+            $actionFuncName = $actionName . 'Action';
+            $controllerFileName = ucfirst($controllerName);
+            $controllerObj = 'app\controller\\' . $controllerFileName;
+            $controllerObj = new $controllerObj();
+            $tpl = "../app/templates/" . $controllerFileName . '/' . $actionName . '.phtml';
+            var_dump($tpl);
+            $view = new View();
+            $controllerObj->view = $view;
+            $controllerObj->$actionFuncName();
+            $view->render($tpl);
+            echo $view->render($tpl);
         }
 
 
-        //Инициализируем сессию:
-
-//        if(!isset($_SESSION['userid']))
-//        if(1)    {
-////            echo 'sadf';
-//            header("user/authorization");
-//
-////            die;
-//
-//        }
-
-//        if (isset($_POST['login']) && isset($_POST['password']))
+  //        if (isset($_POST['login']) && isset($_POST['password']))
 //        {
 //// получаем данные из формы с авторизацией
 //            $login = mysql_real_escape_string($_POST['login']);
@@ -45,22 +50,7 @@ class Application
 //            echo "такого экшена нет";
 //            die;}
 //
-//        $request = new Request();
-//        $controllerName = $request->getControllerName();
-//        $actionName = $request->getActionName();
-//
-//        $actionFuncName = $actionName . 'Action';
-//        $controllerFileName = ucfirst($controllerName);
-//        $controllerObj = 'app\controller\\' . $controllerFileName;
-//        $controllerObj = new $controllerObj();
-//
-//        $tpl = "../app/templates/" . $controllerFileName . '/' . $actionName . '.phtml';
-//        var_dump($tpl);
-//        $view = new View();
-//        $controllerObj->view = $view;
-//        $controllerObj->$actionFuncName();
-//        $view->render($tpl);
-//        echo $view->render($tpl);
+
 
 
     }

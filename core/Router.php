@@ -1,9 +1,5 @@
 <?php
 namespace core;
-//include "../app/controller/User.php";
-//use controller\User;
-//require_once "../vendor/autoload.php";
-//use controllers\User;
 
 class Router
 {
@@ -19,7 +15,7 @@ class Router
 //        $this->actionName = ucfirst(strtolower($this->actionName));
     }
 
-        public function verificationOfAuthorization()
+    public function verificationOfAuthorization()
     {
         if(!isset($_SESSION["email"]) && !isset($_SESSION["password"])){
 //            include "../app/templates/authorization.phtml";
