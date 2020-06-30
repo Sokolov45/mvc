@@ -11,15 +11,16 @@ class Application
             include "../app/templates/User/authorization.phtml";
             exit();
         } else {
-            $request = new Request();
-            $controllerName = $request->getControllerName();
-            $actionName = $request->getActionName();
-            $actionFuncName = $actionName . 'Action';
-            $controllerFileName = ucfirst($controllerName);
+            $router = new Router();
+            $router->getRoute();
+            $actionFuncName = $router->getActionFuncName();
+            $controllerFileName = $router->controllerFileName();
+            $actionName = $router->getActionName();
+
             $controllerObj = 'app\controller\\' . $controllerFileName;
             $controllerObj = new $controllerObj();
             $tpl = "../app/templates/" . $controllerFileName . '/' . $actionName . '.phtml';
-            var_dump($tpl);
+            var_dump($actionFuncName);
             $view = new View();
             $controllerObj->view = $view;
             $controllerObj->$actionFuncName();

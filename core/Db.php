@@ -8,16 +8,10 @@ class Db
 
     private function getConnection()
     {
-        $host = DB_HOST;
-        $dbName = DB_NAME;
-        $dbUser = DB_USER;
-        $dbPassword = DB_PASSWORD;
-
         if (!$this->pdo) {
 //            соединение. В результате мы получаем переменную $this->pdo, с которым и работаем далее на протяжении всего скрипта.
-            $this->pdo = new \PDO("mysql:host=$host;dbname=$dbName", $dbUser, $dbPassword);
+            $this->pdo = new \PDO("mysql:host=localhost;dbname=loftschools", 'root', '');
         }
-
         return $this->_pdo;
     }
 
