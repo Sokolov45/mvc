@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="34d5a8eb-6603-48d3-b8cf-4c6301015aed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Controller/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Context.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Validator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/test2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/UserModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/User/authorization.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/User/register.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Application.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Request.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/View.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +59,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -91,61 +113,28 @@
       <workItem from="1593004746707" duration="599000" />
       <workItem from="1593175644887" duration="2058000" />
       <workItem from="1593536037410" duration="2930000" />
+      <workItem from="1616067063162" duration="775000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="2024" y="277" key="#Composer" timestamp="1591975873538">
-      <screen x="1920" y="0" width="1024" height="1240" />
-    </state>
-    <state x="2024" y="277" key="#Composer/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1591975873538" />
-    <state x="552" y="177" key="#Inspections" timestamp="1592243263041">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1616067487682">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="177" key="#Inspections/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592243263041" />
-    <state x="737" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592040790008">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="737" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592040790008" />
-    <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592121174070">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592121174070" />
-    <state x="690" y="273" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592240613090">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="273" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592240613090" />
-    <state x="774" y="408" key="ComposerDumpAutoloadDialog" timestamp="1592240460529">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="774" y="408" key="ComposerDumpAutoloadDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592240460529" />
-    <state x="737" y="431" key="ComposerInitDialogKey" timestamp="1592037022621">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="737" y="431" key="ComposerInitDialogKey/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592037022621" />
-    <state x="739" y="260" key="FileChooserDialogImpl" timestamp="1593187949741">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="739" y="260" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1593187949741" />
-    <state x="791" y="333" key="NewPhpClassDialog" timestamp="1592236831774">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="791" y="333" key="NewPhpClassDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592236831774" />
-    <state x="388" y="371" key="com.intellij.ide.util.TipDialog" timestamp="1593175689372">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="388" y="371" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1593175689372" />
-    <state x="2127" y="442" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1024.1240@1920.0.1024.1240" timestamp="1591975849214" />
-    <state x="616" y="235" key="run.anything.popup" timestamp="1592121531129">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="235" key="run.anything.popup/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592121531129" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1592078820562">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1024.1240@0.0.1920.1040" timestamp="1592078820562" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.77.1600.860@0.0.1920.1040" timestamp="1616067487682" />
   </component>
 </project>
