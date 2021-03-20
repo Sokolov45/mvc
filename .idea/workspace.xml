@@ -1,62 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d5a8eb-6603-48d3-b8cf-4c6301015aed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Controller/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="5652bc31-014c-48fe-bcc4-9ac60603ee81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/html/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mvc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mvc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/UserModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/User/authorization.phtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/User/register.phtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Application.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Db.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Request.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/View.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable path="composer" />
-    </execution>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
-    <include_path>
-      <path value="$PROJECT_DIR$/vendor/composer" />
-    </include_path>
+  <component name="ProjectId" id="1pyzLNSIpXIrLOYnwm9Jshps7Mt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectId" id="1dB5GJp2GPkpL535LA2qrnXN4z1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,61 +34,27 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/vendor/autoload.php" />
-    <property name="dumpAutoload C:/OSPanel/domains/mvc/composer.json" value="--no-interaction --ansi --verbose --no-scripts --classmap-authoritative --apcu --no-dev" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/core" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OSPanel\domains\mvc\core" />
-      <recent name="C:\OSPanel\domains\mvc\app\templates" />
-      <recent name="C:\OSPanel\domains\mvc\app\templates\assets\css" />
-      <recent name="C:\OSPanel\domains\mvc" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\OSPanel\domains\mvc\app\templates\User" />
-      <recent name="C:\OSPanel\domains\mvc\app\templates" />
-      <recent name="C:\OSPanel\domains\mvc\app\templates\assets" />
-      <recent name="C:\OSPanel\domains\mvc\app" />
-      <recent name="C:\OSPanel\domains\mvc\public" />
-    </key>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="34d5a8eb-6603-48d3-b8cf-4c6301015aed" name="Default Changelist" comment="" />
-      <created>1591885548803</created>
+      <changelist id="5652bc31-014c-48fe-bcc4-9ac60603ee81" name="Default Changelist" comment="" />
+      <created>1616170062104</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1591885548803</updated>
-      <workItem from="1591885551482" duration="1989000" />
-      <workItem from="1591975848523" duration="3831000" />
-      <workItem from="1592033095954" duration="15931000" />
-      <workItem from="1592078436950" duration="2044000" />
-      <workItem from="1592104840689" duration="7708000" />
-      <workItem from="1592119618338" duration="1974000" />
-      <workItem from="1592124844494" duration="10097000" />
-      <workItem from="1592151317275" duration="6858000" />
-      <workItem from="1592226016641" duration="21062000" />
-      <workItem from="1592313577780" duration="3186000" />
-      <workItem from="1592318823049" duration="11709000" />
-      <workItem from="1592402090490" duration="944000" />
-      <workItem from="1592758891920" duration="3159000" />
-      <workItem from="1592837923382" duration="4722000" />
-      <workItem from="1592927214478" duration="2110000" />
-      <workItem from="1593004746707" duration="599000" />
-      <workItem from="1593175644887" duration="2058000" />
-      <workItem from="1593536037410" duration="2930000" />
-      <workItem from="1616067063162" duration="775000" />
+      <updated>1616170062104</updated>
+      <workItem from="1616170063964" duration="661000" />
+      <workItem from="1616215972402" duration="1106000" />
+      <workItem from="1616258567780" duration="1058000" />
+      <workItem from="1616260496896" duration="1557000" />
+      <workItem from="1616262338795" duration="534000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -130,11 +66,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1616067487682">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1600.77.1600.860@0.0.1920.1040" timestamp="1616067487682" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

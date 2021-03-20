@@ -2,7 +2,12 @@
 
 class User
 {
-    function indexAction()
+    function loginAction()
+    {
+        echo __METHOD__;
+    }
+
+    function registerAction()
     {
         echo __METHOD__;
     }
