@@ -1,6 +1,9 @@
 <?php
+namespace App\Controller;
 
-class User
+use Base\AbstractController;
+
+class User extends AbstractController
 {
     function loginAction()
     {
