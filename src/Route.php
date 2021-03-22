@@ -60,16 +60,16 @@ class Route
     public function getControllerName(): string
     {
         if (!$this->processed) {
-            $this->processed;
+            $this->process();
         }
-        return '';
+        return $this->controllerName;
     }
 
     public function getActionName(): string
     {
         if (!$this->processed) {
-            $this->processed;
+            $this->process();
         }
-        return '';
+        return $this->actionName;
     }
 }
