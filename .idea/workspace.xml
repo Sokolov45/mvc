@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5652bc31-014c-48fe-bcc4-9ac60603ee81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/RouteException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Route.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +72,7 @@
       <workItem from="1616262338795" duration="534000" />
       <workItem from="1616473876016" duration="99000" />
       <workItem from="1616475498558" duration="2011000" />
-      <workItem from="1616500925688" duration="3719000" />
+      <workItem from="1616500925688" duration="3823000" />
     </task>
     <servers />
   </component>
