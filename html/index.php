@@ -8,7 +8,8 @@ include "../vendor/autoload.php";
 
 $parts = parse_url($_SERVER['REQUEST_URI']);
 
-//Выносим всю логику роутинга внутрь объекта Route, в индексе оставляем только добавление статических(тех, которые указываем напрямую) роутов
+/*Выносим всю логику роутинга внутрь объекта Route, в индексе оставляем только добавление статических(тех, которые
+ указываем напрямую) роутов*/
 $route = new Route();
 /** @uses \App\Controller\User::loginAction() */ //чтобы можно было искать в find ussages + можно кликнуть по экшену
 $route->addRoute('/user/login', \App\Controller\User::class, 'login'); //User::class - чтобы можно было кликнуть

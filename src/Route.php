@@ -1,21 +1,21 @@
 <?php
 namespace Base;
 
-/*разбирает $_SERVER['REQUEST_URI'] и выданть нам название контроллера и название экшена
+/*разбирает $_SERVER['REQUEST_URI'] и выдаёт нам название контроллера и название экшена
 который в нём нужно вызвать.
 Делаем его так, чтобы если мы хотим - задаём урлы напрямую, а если они не заданы, то задаётся динамиески
 */
 class Route
 {
-    private $controllerName;
-    private $actionName;
+    private $controllerName;    //имя контроллера
+    private $actionName;    //имя экшена
     private $processed = false; //флаг
-    private $routes;
+    private $routes; //шо за хрень?
 
     private function process()
     {
-        $parts = parse_url($_SERVER['REQUEST_URI']);
-        $path = $parts['path'];
+        $parts = parse_url($_SERVER['REQUEST_URI']);    //записываем в переменную ведённый URL (записывается вместе с передаваемыми параметрами
+        $path = $parts['path']; //выуживаем в переменную часть без параметров
 
 //        эта часть отвечает за статический роутинг, в противном случае будем пытаться определить динамически
         if (($route = $this->routes[$path] ?? null) !== null) { //когда нужно запроцессить роутинг мы сначала проверяем есть ли наш path  в массиве routes
@@ -56,7 +56,7 @@ class Route
 //        };
     }
 
-//    добавляет в наши роуты имя контроллера и экшена, который нужно выполнить
+//    добавляет в наши роуты имя контроллера и экшена, который нужно выполнить (добавляет статические роуты)
     public function addRoute($path, $controllerName, $actionName)
     {
         $this->routes[$path] = [
