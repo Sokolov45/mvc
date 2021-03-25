@@ -9,7 +9,7 @@ class Route
 {
     private $controllerName;    //имя контроллера
     private $actionName;    //имя экшена
-    private $processed = false; //флаг
+    private $processed = false; //флаг - нахуа?
     private $routes; //шо за хрень?
 
     private function process()
@@ -17,21 +17,20 @@ class Route
         $parts = parse_url($_SERVER['REQUEST_URI']);    //записываем в переменную ведённый URL (записывается вместе с передаваемыми параметрами
         $path = $parts['path']; //выуживаем в переменную часть без параметров
 
-//        эта часть отвечает за статический роутинг, в противном случае будем пытаться определить динамически
-        if (($route = $this->routes[$path] ?? null) !== null) { //когда нужно запроцессить роутинг мы сначала проверяем есть ли наш path  в массиве routes
+//        Условие отвечает за статический роутинг (если такой путь есть в массиве routes - то..., в противном случае будем пытаться определить динамически.
+        if (($route = $this->routes[$path] ?? null) !== null) { //когда нужно запроцессить роутинг мы сначала проверяем есть ли наш path в массиве routes
             $this->controllerName = $route[0];    //определяем внутренние переменные
             $this->actionName = $route[1];    //определяем внутренние переменные
         } else {
             $parts = explode('/', $path);
             var_dump($parts);
-            $this->controllerName = '\\App\\Controller' . ucfirst(strtolower($parts[1]));
-            $this->actionName = strtolower($parts[2] ?? 'index');
+            $this->controllerName = '\\App\\Controller\\' . ucfirst(strtolower($parts[1]));
+            $this->actionName = strtolower($parts[2] ?? 'Index');
 
+//            если нет класса контроллера с ведённым названием, то выбрасываем ошибку
             if (!class_exists($this->controllerName)) {
                 throw new RouteException('ne mogu naiti controller' . $this->controllerName);
             }
-
-
         };
 //        switch ($parts['path']) {
 //            case '/user/login':
@@ -59,7 +58,7 @@ class Route
 //    добавляет в наши роуты имя контроллера и экшена, который нужно выполнить (добавляет статические роуты)
     public function addRoute($path, $controllerName, $actionName)
     {
-        $this->routes[$path] = [
+        $this->routes[$path] = [ //routes превращается после этого в массив =)
             $controllerName,
             $actionName
         ];
