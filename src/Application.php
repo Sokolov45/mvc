@@ -40,7 +40,7 @@ class Application
 //        $this->route->addRoute('/user/register', \App\Controller\User::class, 'register');
 //
 //        /** @uses \App\Controller\Blog::indexAction() */
-//        $this->route->addRoute('/blog', \App\Controller\Blog::class, 'index');
+        $this->route->addRoute('/blog', \App\Controller\Blog::class, 'index');
 //        $this->route->addRoute('/blog/index', \App\Controller\Blog::class, 'index');
     }
 
