@@ -24,7 +24,6 @@ class Route
                 $this->actionName = $route[1];    //определяем внутренние переменные
             } else {
                 $parts = explode('/', $path);
-                var_dump($parts);
                 $this->controllerName = '\\App\\Controller\\' . ucfirst(strtolower($parts[1]));
                 $this->actionName = strtolower($parts[2] ?? 'Index');
             };
