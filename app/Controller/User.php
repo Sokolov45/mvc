@@ -12,6 +12,10 @@ class User extends AbstractController
 
     function registerAction()
     {
-        echo __METHOD__;
+        $user = new \App\Model\User();
+        return $this->view->render('User/register.phtml', [
+            'userName' => 'Anton',
+            'age' => 18,
+            'user' => $user]);
     }
 }
