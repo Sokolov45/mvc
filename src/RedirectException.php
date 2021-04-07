@@ -11,12 +11,10 @@ class RedirectException extends \Exception  //Это сделано для: Ни
     {
         $this->url = $url;
     }
-//    public function gerUrl(): string
-//    {
-//        return $this->url;
-//    }
-    public function test()
+    public function gerUrl(): string
     {
-        echo 'test';
+        return $this->url;
     }
 }
+
+//пользовать его будет в AbstractController

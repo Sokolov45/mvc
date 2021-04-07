@@ -12,5 +12,4 @@ class Blog extends AbstractController
         }
         echo __METHOD__;
     }
-
 }

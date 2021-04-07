@@ -13,9 +13,9 @@ abstract class AbstractController  //это наш базовый контрол
     /**
      * @param View $view
      */
-    public function setView(View $view): void
+    public function setView(View $view): void   //будем пользовать в Application (записывать объект View контролеру,
+//        чтобы потом в его экшене вызывать View->render()
     {
         $this->view = $view;
     }
-
 }

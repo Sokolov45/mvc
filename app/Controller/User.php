@@ -19,3 +19,5 @@ class User extends AbstractController
             'user' => $user]);
     }
 }
+
+/* зачем модельку в $user положили? */
