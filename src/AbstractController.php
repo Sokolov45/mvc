@@ -3,6 +3,7 @@ namespace Base;
 
 abstract class AbstractController  //это наш базовый контроллер
 {
+//    Мы будем из контроллера указывать какой шаблон хотим отобразить и для этого пихаем туда вью
     /** @var View */
     protected $view;
     protected function redirect(string $url) //метод редиректа

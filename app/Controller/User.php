@@ -20,4 +20,3 @@ class User extends AbstractController
     }
 }
 
-/* зачем модельку в $user положили? */

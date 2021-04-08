@@ -1,7 +1,7 @@
 <?php
 namespace Base;
 
-class View  //будет заниматься рендеренгом
+class View  //будет заниматься рендеренгом (возвращать контент)
 {
     private $templatePath = '';
     private $data = [];
@@ -19,7 +19,11 @@ class View  //будет заниматься рендеренгом
         include $this->templatePath . DIRECTORY_SEPARATOR . $tpl;
         return ob_get_clean();
     }
-    public function __get($varName) //магический метод - вызывается при обращении к несуществующему свойству класса
+
+    /*магический метод - вызывается при обращении к несуществующему свойству класса
+    нужен короче потому, что мы не знаем какие данные будет передавать контроллер (их же будет много и у них разные
+    данные будут - заранее не угадаешь, поэтому и пользуем __get*/
+    public function __get($varName)
     {
         return $this->data[$varName] ?? null;
     }
