@@ -14,7 +14,7 @@ class View  //будет заниматься рендеренгом (возвр
 
     public function render(string $tpl, $data = []): string
     {
-        $this->data += $data;
+        $this->data += $data;   //массив + чё?
         ob_start();
         include $this->templatePath . DIRECTORY_SEPARATOR . $tpl;
         return ob_get_clean();

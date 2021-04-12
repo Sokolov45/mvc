@@ -16,11 +16,11 @@ class User extends AbstractController
     {
         $names = ['Dima', 'Bob', 'Anton', 'Jack'];
         $name = $names[array_rand($names)];   //ПОЛУЧИТЬ СЛУЧАЙНЫЙ КЛЮЧ а затем взять элемент
-        $gender = UserModel::GENDER_MALE;
+        $gender = UserModel::GENDER_MALE;   //типо пол захардкодил или что?
         $password = '12345';
 
-//        инклудим namespace через алиас, чтобы не было конфликта имён
-        $user = (new UserModel())
+
+        $user = (new UserModel())   //инклудим namespace через алиас, чтобы не было конфликта имён
             ->setName($name)
             ->setGender($gender)
             ->setPassword(UserModel::getPasswordHash($password));
@@ -37,7 +37,7 @@ class User extends AbstractController
     public function profileAction()
     {
         return $this->view->render('User/profile.phtml', [
-            'user' => UserModel::getById((int) $_GET['id'])
+            'user' => UserModel::getById((int) $_GET['id'])         //непонятно
         ]);
     }
 }

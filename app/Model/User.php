@@ -36,7 +36,6 @@ class User extends AbstractModel
     {
         return $this->name;
     }
-
     public function setName(string $name)
     {
         $this->name = $name;
@@ -50,7 +49,6 @@ class User extends AbstractModel
     {
         return $this->id;
     }
-
     /**
      * @param mixed $id
      */
@@ -128,7 +126,7 @@ class User extends AbstractModel
         $db->exec($insert, __METHOD__, [
             ':name' => $this->name,
             ':password' => $this->password,
-            ':gender' => $this->getGender()
+            ':gender' => $this->getGender() //почему так?
         ]);
 
         $id = $db->lastInsertId();
