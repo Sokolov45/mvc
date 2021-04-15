@@ -1,6 +1,6 @@
 <?php
-/** @var \App\Model\User $user */
-$user = $this->user;                    //непонятно маленько
+/** @var \App\Model\User $user */   //говорим, что переменная $user - это объект класса ModelUser
+$user = $this->user;    //переданная в шаблон модель доступна как $this->user
 ?>
 
 <?php if ($user): ?>
@@ -10,3 +10,10 @@ $user = $this->user;                    //непонятно маленько
 <?php else: ?>
 Пользователь не найден
 <?php endif; ?>
+
+<?php echo "свойства: <br>";
+var_dump(get_object_vars($this));
+//get_class_vars($this);
+//get_class_methods($this);
+
+    var_dump($this->Anton);

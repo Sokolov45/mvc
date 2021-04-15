@@ -4,14 +4,12 @@ namespace App\Model;
 use Base\AbstractModel;
 use Base\Db;
 
-
 //модель пользователя будет описывать то, что мы храним в базе данных
 class User extends AbstractModel
 {
 //константы под гендер
     const GENDER_FEMALE = 2;
     const GENDER_MALE = 1;
-
 
 //    делаем свойства такие же как название колонки в бд
     private $id;
@@ -20,6 +18,11 @@ class User extends AbstractModel
     private $createdAt;
     private $gender;
 
+    /* Вообщем мы создаём объект в СТАТИЧЕСКОМ (Объявление свойств и методов класса статическими
+    позволяет обращаться к ним без создания экземпляра класса) методе getById() этого же класса, то есть по сути создаём
+    объект класса из его же собственного метода, благодаря тому, что это метод статический. Мы передам методу id,
+    он ищет пользователя по этому id и записывает его в переменную в виде массива, после чего создаёт объект этого же
+    класса передавая в параметры массив пользователя...а! как тебе такое!?)  */
     public function __construct($data = [])
     {
         if ($data) {
@@ -29,6 +32,18 @@ class User extends AbstractModel
             $this->gender = $data['gender'];
             $this->createdAt = $data['created_at'];
         }
+    }
+
+//    создать объект класса и сразу записать в него полученные из базы свойства (id, gender и тд)
+    public static function getById(int $id): ?self  //?self - вернеёт либо объект этого же класса либо нал
+    {
+        $db = Db::getInstance();
+        $select = "SELECT * FROM users WHERE id = $id";
+        $data = $db->fetchOne($select, __METHOD__);
+        if (!$data) {
+            return null;
+        }
+        return new self($data);
     }
 
     //    делаем геттеры и сеттеры для всех наших полей
@@ -41,7 +56,6 @@ class User extends AbstractModel
         $this->name = $name;
         return $this;
     }
-
     /**
      * @return mixed
      */
@@ -57,7 +71,6 @@ class User extends AbstractModel
         $this->id = $id;
         return $this;
     }
-
     /**
      * @return mixed
      */
@@ -65,16 +78,15 @@ class User extends AbstractModel
     {
         return $this->password;
     }
-
     /**
      * @param mixed $password
+     * @return User
      */
     public function setPassword($password): self
     {
         $this->password = $password;
         return $this;
     }
-
     /**
      * @return mixed
      */
@@ -82,7 +94,6 @@ class User extends AbstractModel
     {
         return $this->createdAt;
     }
-
     /**
      * @param mixed $createdAt
      */
@@ -91,7 +102,6 @@ class User extends AbstractModel
         $this->createdAt = $createdAt;
         return $this;
     }
-
     /**
      * @return mixed
      */
@@ -99,12 +109,10 @@ class User extends AbstractModel
     {
         return $this->gender;
     }
-
     public function getGenderString(): string
     {
         return $this->gender == self::GENDER_MALE ? 'male' : 'female';
     }
-
     /**
      * @param mixed $gender
      */
@@ -114,58 +122,29 @@ class User extends AbstractModel
         return $this;
     }
 
-//    сохранить пользователя
-    public function save()
+    public function save()  //сохранить пользователя
     {
-//        получаем объект соединения с базой данных
-        $db = Db::getInstance();
-//        запрос
+        $db = Db::getInstance();    //получаем объект соединения с базой данных
         $insert = "INSERT INTO users (`name`, `password`, `gender`) VALUES (
             :name, :password, :gender
         )";
         $db->exec($insert, __METHOD__, [
             ':name' => $this->name,
             ':password' => $this->password,
-            ':gender' => $this->getGender() //почему так?
+            ':gender' => $this->gender
         ]);
 
         $id = $db->lastInsertId();
-        $this->id = $id;
+        $this->id = $id;    //записываем только что полученный идентификатор в модель пользователя
         return $id;
     }
 
-    public static function getById(int $id): ?self  //?self - вернеёт либо объект этого класса либо нал
-    {
-        $db = Db::getInstance();
-        $select = "SELECT * FROM users WHERE id = $id";
-        $data = $db->fetchOne($select, __METHOD__);
-
-        if (!$data) {
-            return null;
-        }
-
-/*      можно так:
-        $model = new self();
-        $model->id = $data['id'];
-        $model->password = $data['password'];
-        $model->gender = $data['gender'];
-        $model->createdAt = $data['created_at'];
-        return $model;
-*/
-
-//        а можно проще сделать вот такой ретурн и добавить в конструктор данные:
-        return new self($data);
-
-    }
-
-    //        статический потому, что к самой модельке отношения не имеет
-    public static function getPasswordHash(string $password)
+    public static function getPasswordHash(string $password)  //статический потому, что к самой модельке отношения не имеет
     {
         return sha1(',asdf,31!' . $password);
     }
-
 }
 
 /*логика такая: создаём модельку пользователя (это всё происходит в памяти php), затем отправляем запрос в базу
-база делает инсерт - возвращает индетификатор записи и мы помещяем его в модель на случай если потом захотим воспользоваться
-(в контроллере например можем сделать $user->getId())*/
+база делает инсерт - возвращает индентификатор записи и мы помещяем его в модель на случай если потом захотим
+воспользоваться (в контроллере например можем сделать $user->getId())*/

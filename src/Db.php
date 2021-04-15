@@ -65,15 +65,6 @@ class Db
         }
     }
 
-//    public function fetchOne($query, $opt = [])
-//    {
-//        $prepare = $this->getConnection()->prepare($query);
-//        $res = $prepare->execute($opt);
-//        if ($res) {
-//            $array = $prepare->fetchAll(\PDO::FETCH_ASSOC);
-//            return reset($array);
-//        }
-//    }
     public function fetchOne(string $query, $_method, array $params = [])
     {
         $t = microtime(true);
@@ -98,14 +89,12 @@ class Db
         return reset($data);
     }
 
-    public function exec(string $query, $_method, array $params = []): int
+    public function exec(string $query, $_method, array $params = []): int  //выполнить запрос, ничего не возвращая (не возвращая ничего дельного всмысле)
     {
         $t = microtime(1);
         $pdo = $this->getConnection();
         $prepared = $pdo->prepare($query);
-
         $ret = $prepared->execute($params);
-
 
         if (!$ret) {
             $errorInfo = $prepared->errorInfo();
@@ -118,10 +107,6 @@ class Db
 
         return $affectedRows;
     }
-
-
-
-
 
     public function lastInsertId()
     {

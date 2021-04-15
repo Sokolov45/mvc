@@ -10,9 +10,3 @@ include "../vendor/autoload.php";
 
 $app = new Application();
 $app->run();
-
-
-/*непонятки
-1.
-
-*/
