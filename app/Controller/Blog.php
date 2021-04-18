@@ -6,7 +6,7 @@ class Blog extends AbstractController
 {
     function indexAction()
     {
-        if (isset($_GET['redirect'])) {
+        if ($this->user) {
             $this->redirect("/user/register");
         }
         echo __METHOD__;

@@ -26,6 +26,7 @@ class Application
 
             $view = new View();
             $this->controller->setView($view);
+            $this->initUser();  //добавляет пользователя в контроллер
 
             $content = $this->controller->{$this->actionName}();
             echo $content;

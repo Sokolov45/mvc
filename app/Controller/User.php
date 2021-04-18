@@ -6,26 +6,37 @@ use Base\AbstractController;
 class User extends AbstractController
 {
 
-//    метода для авторизации
+    //метода для авторизации
     public function loginAction()
     {
-//        получаем от пользователя имя и пароль
+
+        //получаем от пользователя имя и пароль
         $name = trim($_POST['name']);
         $password = $_POST['password'];
 
-//        теперь нужно получить пользователя с таким именем и паролем - нужен метод getByName
-        $user = UserModel::getByName($name);
+        if ($name) {
+            /*    теперь нужно получить пользователя с таким именем и паролем - нужен метод getByName*/
+            $user = UserModel::getByName($name);
 
-        if (!$user) {
+            if (!$user) {
+//                $this->view->render()
+            }
 
+            if (UserModel::getPasswordHash($password) != $user->getPassword()) {
+
+            }
+
+            //если пользователь успешно авторизовался - помещаем идентификатор пользователя в сессию
+            $_SESSION['id'] = $user->getId();
+
+            $this->redirect('blog/index');
         }
 
-        if (UserModel::getPasswordHash($password) != $user->getPassword()) {
-
-        }
-
-//        если пользователь успешно авторизовался - помещаем идентификатор пользователя в сессию
-        $_SESSION['id'] = $user->getId();
+        return $this->view->render('User/register.phtml', [
+            'user' => UserModel::getById((int) $_GET['id']), /*Здесь мы получаем пользователя и
+             одновременно создаём объект c полученными из базы данными*/
+            "Anton" => 'Sokol'
+        ]);
     }
 
     function registerAction()   //экшен для "зарегистрировать пользователя"
