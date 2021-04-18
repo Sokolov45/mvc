@@ -34,18 +34,6 @@ class User extends AbstractModel
         }
     }
 
-//    создать объект класса и сразу записать в него полученные из базы свойства (id, gender и тд)
-    public static function getById(int $id): ?self  //?self - вернеёт либо объект этого же класса либо нал
-    {
-        $db = Db::getInstance();
-        $select = "SELECT * FROM users WHERE id = $id";
-        $data = $db->fetchOne($select, __METHOD__);
-        if (!$data) {
-            return null;
-        }
-        return new self($data);
-    }
-
     //    делаем геттеры и сеттеры для всех наших полей
     public function getName(): string
     {
@@ -120,6 +108,29 @@ class User extends AbstractModel
     {
         $this->gender = $gender;
         return $this;
+    }
+
+//    создать объект класса и сразу записать в него полученные из базы свойства (id, gender и тд)
+    public static function getById(int $id): ?self  //?self - вернеёт либо объект этого же класса либо нал
+    {
+        $db = Db::getInstance();
+        $select = "SELECT * FROM users WHERE id = $id";
+        $data = $db->fetchOne($select, __METHOD__);
+        if (!$data) {
+            return null;
+        }
+        return new self($data);
+    }
+
+    public static function getByName(string $name): ?self    //В данном контексту предполагается, что имя должно быть уникальное
+    {
+        $db = Db::getInstance();
+        $select = "SELECT * FROM users WHERE id = $id";
+        $data = $db->fetchOne($select, __METHOD__);
+        if (!$data) {
+            return null;
+        }
+        return new self($data);
     }
 
     public function save()  //сохранить пользователя

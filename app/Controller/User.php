@@ -5,9 +5,16 @@ use Base\AbstractController;
 
 class User extends AbstractController
 {
-    function loginAction()
+
+//    метода для авторизации
+    public function loginAction()
     {
-        echo __METHOD__;
+//        получаем от пользователя имя и пароль
+        $name = $_POST['name'];
+        $password = $_POST['password'];
+
+//        теперь нужно получить пользователя с таким именем и паролем - нужен метод getByName
+
     }
 
     function registerAction()   //экшен для "зарегистрировать пользователя"
@@ -22,12 +29,9 @@ class User extends AbstractController
             ->setGender($gender)
             ->setPassword(UserModel::getPasswordHash($password));
 
-        $userId = $user->save();    //сохраняем пользователя
+        $user->save();    //сохраняем пользователя
 
-        var_dump($user->getId());
-
-        return $this->view->render('User/register.phtml', [
-        ]);
+        $this->redirect('Blog/index');
     }
 
 //    научимся получать пользователя из базы
