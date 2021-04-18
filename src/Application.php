@@ -1,6 +1,8 @@
 <?php
 namespace Base;
 
+use App\Model\User;
+
 class Application
 {
     private $route;
@@ -17,6 +19,7 @@ class Application
     public function run()
     {
         try {
+            session_start();    //for authorization
             $this->addRoutes();
             $this->initController();
             $this->initAction();
@@ -33,6 +36,17 @@ class Application
             echo $e->getMessage();
         }
 
+    }
+
+    public function initUser()
+    {
+        $id = $_SESSION['id'] ?? null;
+        if ($id) {
+            $user = User::getById($id);
+            if ($user) {
+                $this->controller->setUser($user);
+            }
+        }
     }
 
     private function addRoutes()

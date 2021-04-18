@@ -10,18 +10,27 @@ class User extends AbstractController
     public function loginAction()
     {
 //        получаем от пользователя имя и пароль
-        $name = $_POST['name'];
+        $name = trim($_POST['name']);
         $password = $_POST['password'];
 
 //        теперь нужно получить пользователя с таким именем и паролем - нужен метод getByName
+        $user = UserModel::getByName($name);
 
+        if (!$user) {
+
+        }
+
+        if (UserModel::getPasswordHash($password) != $user->getPassword()) {
+
+        }
+
+//        если пользователь успешно авторизовался - помещаем идентификатор пользователя в сессию
+        $_SESSION['id'] = $user->getId();
     }
 
     function registerAction()   //экшен для "зарегистрировать пользователя"
     {
-//        здесь получаем данные для создания пользователя - но почему здесь то, а не в модели????????
-        $names = ['Dima', 'Bob', 'Anton', 'Jack'];
-        $name = $names[array_rand($names)];   //ПОЛУЧИТЬ СЛУЧАЙНЫЙ КЛЮЧ а затем взять элемент
+        $name = trim($_POST['name']);
         $gender = UserModel::GENDER_MALE;
         $password = '12345';
         $user = (new UserModel())   //инклудим namespace через алиас, чтобы не было конфликта имён
