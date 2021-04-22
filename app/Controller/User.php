@@ -23,7 +23,7 @@ class User extends AbstractController
         //получаем от пользователя имя (оно у нас сделано уникальным)
         $name = trim($_POST['name']);
 
-        if ($name) {    //если имя передано, то мы начинаем пытаться авторизовать юзера
+        if ($_POST['name']) {    //если имя передано, то мы начинаем пытаться авторизовать юзера
             $password = $_POST['password'];
             /*    теперь нужно получить пользователя с таким именем и паролем - нужен метод getByName*/
             $user = UserModel::getByName($name);
@@ -91,7 +91,7 @@ class User extends AbstractController
                 Конкретно здесь это не так важно, потому что редирект делаем, но если бы вместо редиректа была
                 какая-то логика, то в ней хорошо чтобы $this->user работал */
 
-                $this->redirect('Blog/index');
+                $this->redirect('/blog/index');
             }
         };
 
@@ -115,7 +115,7 @@ class User extends AbstractController
     public function logoutAction()
     {
         session_destroy();
-        $this->redirect('user/login');  //редиректим на страницу логина пароля
+        $this->redirect('/user/login');  //редиректим на страницу логина пароля
     }
 
 }
