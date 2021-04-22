@@ -36,13 +36,14 @@ class Application
             header("HTTP/1.0 404 Not Found");
             echo $e->getMessage();
         }
-
     }
 
+    /*говорит, что лучше бы вынести типо в отдельный класс (например класс для работы с сессией), но в
+    итоге хер забил и здесь оставил*/
     public function initUser()
     {
-        $id = $_SESSION['id'] ?? null;
-        if ($id) {
+        $id = $_SESSION['id'] ?? null;  //берём идентификатор из сессии
+        if ($id) {  //если идентификатор есть, пытаемся получить пользователя по идентификатору
             $user = User::getById($id);
             if ($user) {
                 $this->controller->setUser($user);

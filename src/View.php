@@ -11,6 +11,13 @@ class View  //будет заниматься рендеренгом (возвр
         $this->templatePath = PROJECT_ROOT_DIR . DIRECTORY_SEPARATOR . 'app/View';
     }
 
+    /*короче у нас есть передача параметров через шаблон (метод render), нужно научиться просто передавать
+    переменные*/
+    public function assign(string $name, $value)
+    {
+        $this->data[$name] = $value;
+    }
+
     public function render(string $tpl, $data = []): string
     {
         $this->data += $data;   //массив + чё?

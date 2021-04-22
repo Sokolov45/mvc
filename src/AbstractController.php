@@ -9,25 +9,23 @@ abstract class AbstractController  //это наш базовый контрол
     /** @var View */
     protected $view;
     /** @var User */
-    protected $user;
+    protected $user;    //сами с собой договариваемся, что храним здесь текущего атворизованного пользователя
 
     protected function redirect(string $url) //метод редиректа
     {
         throw new RedirectException($url);
     }
 
-    /**
-     * @param View $view
-     */
-    public function setView(View $view): void   //будем пользовать в Application (записывать объект View контролеру,
-//        чтобы потом в его экшене вызывать View->render()
+    /** @param View $view   */  /*так говорим шторму, что аргумент $view - это экземпляр класса View (передаётя
+  объект класса View*/
+    public function setView(View $view): void   /*будем пользовать в Application (записывать объект View контролеру,
+        чтобы потом в его экшене вызывать View->render()*/
     {
         $this->view = $view;
     }
 
-    /** @var User $user */
- public function setUser(User $user): void   //будем пользовать в Application (записывать объект View контролеру,
-//        чтобы потом в его экшене вызывать View->render()
+    /** @var User $user */  //здесь можно и без него, потому что мы в параметрах используем указание типов
+ public function setUser(User $user): void
     {
         $this->user = $user;
     }
