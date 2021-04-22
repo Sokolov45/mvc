@@ -85,9 +85,11 @@ class User extends AbstractController
                 $user->save();    //сохраняем пользователя
 
                 /*если мы зарегились, то надо авторизовать пользователя (как будто он зашёл на сайт*/
-                $_SESSION['id'] = $user->getId();
+                $_SESSION['id'] = $user->getId();   //добавляем id в сессию
                 $this->setUser($user);  /*засетить пользователя в наш контроллер (чтобы мы могли проверять
-                через $this->user если вдруг мы зохотим где-то модельку $this->user использовать*/
+                через $this->user если вдруг мы где-то захотим ещё где-то модельку $this->user использовать
+                Конкретно здесь это не так важно, потому что редирект делаем, но если бы вместо редиректа была
+                какая-то логика, то в ней хорошо чтобы $this->user работал */
 
                 $this->redirect('Blog/index');
             }
@@ -113,7 +115,7 @@ class User extends AbstractController
     public function logoutAction()
     {
         session_destroy();
-        $this->redirect('user/login');
+        $this->redirect('user/login');  //редиректим на страницу логина пароля
     }
 
 }
