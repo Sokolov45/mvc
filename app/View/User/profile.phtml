@@ -1,6 +1,7 @@
 <?php
 /** @var \App\Model\User $user */   //говорим, что переменная $user - это объект класса ModelUser
 $user = $this->user;    //переданная в шаблон модель доступна как $this->user
+var_dump($user);
 ?>
 
 <?php if ($user): ?>
@@ -8,7 +9,7 @@ $user = $this->user;    //переданная в шаблон модель до
     gender: <?= $user->getGenderString(); ?> <br>
     registered: <?= $user->getCreatedAt(); ?> <br>
 <?php else: ?>
-Пользователь не найден
+Пользователь не найден <br>
 <?php endif; ?>
 
 <?php echo "свойства: <br>";

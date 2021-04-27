@@ -123,7 +123,7 @@ class User extends AbstractModel
     }
 
 //    получаем модельку пользователя по имени
-    public static function getByName(string $name): ?self    //В данном контексту предполагается, что имя должно быть уникальное
+    public static function getByName(string $name): ?self    //В данном контексте предполагается, что имя должно быть уникальным
     {
         $db = Db::getInstance();
         $select = "SELECT * FROM users WHERE `name` = :name";

@@ -9,10 +9,10 @@ class Route
 {
     private $controllerName;    //имя контроллера
     private $actionName;    //имя экшена
-    private $processed = false; //флаг - нахуа?
+    private $processed = false; //флаг - чтобы разбирать URL только единожды
     private $routes;
 
-    private function process() //основной метод, который распилисвает request_uri
+    private function process() //основной метод, который распиливает request_uri
     {
         if (!$this->processed) {
             $parts = parse_url($_SERVER['REQUEST_URI']);    //записываем в переменную ведённый URL (записывается вместе с передаваемыми параметрами
@@ -31,8 +31,7 @@ class Route
         $this->processed = true;
     }
 
-//    добавляет в наши роуты имя контроллера и экшена, который нужно выполнить (добавляет статические роуты)
-    public function addRoute($path, $controllerName, $actionName)
+    public function addRoute($path, $controllerName, $actionName)   //добавляет в наши роуты имя контроллера и экшена, который нужно выполнить (добавляет статические роуты)
     {
         $this->routes[$path] = [ //routes превращается после этого в массив =)
             $controllerName,
@@ -56,7 +55,3 @@ class Route
         return $this->actionName . 'Action';
     }
 }
-
-/* Неопнятки
-
-*/
